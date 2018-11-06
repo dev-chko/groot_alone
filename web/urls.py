@@ -27,5 +27,6 @@ urlpatterns = [
     path('table-basic/', table_basic),
     path('icon-material', icon_material),
     path('member/', member),
-    path('complete/', complete)
+    path('complete/', complete),
+    path('upload/', upload),
 ]

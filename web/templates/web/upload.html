@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'assets/images/favicon.png' %}">
-    <title>Nice admin Template - The Ultimate Multipurpose admin template</title>
+    <title>We are Groot - 기술 등록</title>
     <!-- Custom CSS -->
     <link href="{% static 'dist/css/style.min.css' %}" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -57,6 +57,13 @@
                                 <span class="hide-menu">Dashboard</span>
                             </a>
                         </li>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/index/upload" aria-expanded="false">
+                                <i class="mdi mdi-file"></i>
+                                <span class="hide-menu">기술임치 등록</span>
+                            </a>
+                        </li>
                         <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/index/pages-profile" aria-expanded="false">
                                 <i class="mdi mdi-account-network"></i>
@@ -74,13 +81,6 @@
                                 <i class="mdi mdi-face"></i>
                                 <span class="hide-menu">Icon</span>
                             </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/index/starter-kit" aria-expanded="false">
-                                <i class="mdi mdi-file"></i>
-                                <span class="hide-menu">Blank</span>
-                            </a>
-                        </li>
                         <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/index/error-404" aria-expanded="false">
                                 <i class="mdi mdi-alert-outline"></i>
@@ -115,7 +115,7 @@
                                     <li class="breadcrumb-item">
                                         <a href="#">Home</a>
                                     </li>
-                                    <li class="breadcrumb-item active" aria-current="page">Starter Page</li>
+                                    <li class="breadcrumb-item active" aria-current="page">기술 등록</li>
                                 </ol>
                             </nav>
                         </div>
@@ -138,11 +138,21 @@
                             <div class="card-body">
                                 <form method="post"
                                       enctype="multipart/form-data">
-                                        <input type="file" name="my_file"><br>
-                                        <input type="submit">
-                                        {% csrf_token %}
+                                    <div class="form-group">
+                                    <label>Custom File upload</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">Upload</span>
+                                        </div>
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="inputGroupFile01">
+                                            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                    {% csrf_token %}
                                 </form>
-                                This is some text within a card block.
+                                해당 기술은 대외비로 처리됩니다.
                             </div>
                         </div>
                     </div>

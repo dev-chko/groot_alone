@@ -49,6 +49,17 @@ def complete(request):
         email = request.POST['e_mail']
         Signup(id=id, pw=pw, name=name, e_mail=email).save()
         return render(request, 'web/complete.html', {})
+def upload(request):
+    if request.method == "GET":
+        return render(request, 'web/upload.html', {})
+    else:
+        upload_files = request.FILES.getlist('my_file')
+        for upload_file in upload_files:
+            with open('file/' + upload_file.name, 'wb') as file:
+                for chunk in upload_file.chunks():
+                    file.write(chunk)
+        return HttpResponse('완료'+ upload_file.name)
+
 
 def starter_kit(request):
     return render(request, 'web/starter-kit.html', {})

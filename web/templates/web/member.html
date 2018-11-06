@@ -33,136 +33,106 @@
     <!-- ============================================================== -->
     <!-- Main wrapper - style you can find in pages.scss -->
     <!-- ============================================================== -->
-    <div id="main-wrapper" data-navbarbg="skin6" data-theme="light" data-layout="vertical" data-sidebartype="full" data-boxed-layout="full">
+       <div class="page-wrapper" style="height:100%">
         <!-- ============================================================== -->
-        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- Bread crumb and right sidebar toggle -->
         <!-- ============================================================== -->
-
-        <!-- ============================================================== -->
-        <!-- End Topbar header -->
-        <!-- ============================================================== -->
-        <!-- ============================================================== -->
-        <!-- Left Sidebar - style you can find in sidebar.scss  -->
-        <!-- ============================================================== -->
-        <aside class="left-sidebar" data-sidebarbg="skin5">
-            <!-- Sidebar scroll-->
-            <div class="scroll-sidebar">
-                <!-- Sidebar navigation-->
-                <!-- End Sidebar navigation -->
-            </div>
-            <!-- End Sidebar scroll-->
-        </aside>
-        <!-- ============================================================== -->
-        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
-        <!-- ============================================================== -->
-        <!-- ============================================================== -->
-        <!-- Page wrapper  -->
-        <!-- ============================================================== -->
-        <div class="page-wrapper">
-            <!-- ============================================================== -->
-            <!-- Bread crumb and right sidebar toggle -->
-            <!-- ============================================================== -->
-            <div class="page-breadcrumb">
-                <div class="row">
-                    <div class="col-5 align-self-center">
-                        <h4 class="page-title">회원가입</h4>
+        <div class="page-breadcrumb">
+            <div class="row">
+                <div class="col-5 align-self-center">
+                    <h4 class="page-title">Groot Sign in</h4>
+                </div>
+                <div class="col-7 align-self-center">
+                    <div class="d-flex align-items-center justify-content-end">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item">
+                                    <a href="../..">Login</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">Sign up</li>
+                            </ol>
+                        </nav>
                     </div>
-                    <div class="col-7 align-self-center">
-                        <div class="d-flex align-items-center justify-content-end">
-                            <nav aria-label="breadcrumb">
-                                <ol class="breadcrumb">
-                                    <li class="breadcrumb-item">
-                                        <a href="../..">로그인</a>
-                                    </li>
-                                    <li class="breadcrumb-item active" aria-current="page">회원가입</li>
-                                </ol>
-                            </nav>
-                        </div>
+                </div>
+            </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Bread crumb and right sidebar toggle -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Container fluid  -->
+        <!-- ============================================================== -->
+        <div class="container-fluid">
+            <!-- ============================================================== -->
+            <!-- Start Page Content -->
+            <!-- ============================================================== -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="card card-body">
+                        <h4 class="card-title">Groot Mebmership</h4>
+                        <h5 class="card-subtitle"> Please Join Groot Member </h5>
+                        <form class="form-horizontal m-t-30" action="../complete/" method="post">
+                            {% csrf_token %}
+                            <br><br><br>
+                             <div class="form-group">
+                                <label for="ID">ID <span class="help"></span></label>
+                                <input type="text" id="ID" name="id" class="form-control" placeholder="Input your ID">
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Name <span class="help"></span></label>
+                                <input type="text" id="name" name="name" class="form-control" placeholder="Input your Fullname">
+                            </div>
+                            <div class="form-group">
+                                <label>Password</label>
+                                <input type="password" class="form-control" value="password" name="pw">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email <span class="help"></span></label>
+                                <input type="email" id="email" name="e_mail" class="form-control" placeholder="example@gmail.com">
+                            </div>
+                            <div class="form-group">
+                                <label>주소</label>
+                                <input type="text" class="form-control" placeholder="Input your Address">
+                            </div>
+                            <div class="form-group">
+                                <label>자기소개</label>
+                                <textarea class="form-control" rows="5"></textarea>
+                            </div>
+                            <div>
+                                <input type="submit" name="제출">
+                            </div>
+                            <br>
+                        </form>
                     </div>
                 </div>
             </div>
             <!-- ============================================================== -->
-            <!-- End Bread crumb and right sidebar toggle -->
+            <!-- End PAge Content -->
             <!-- ============================================================== -->
             <!-- ============================================================== -->
-            <!-- Container fluid  -->
+            <!-- Right sidebar -->
             <!-- ============================================================== -->
-            <div class="container-fluid">
-                <!-- ============================================================== -->
-                <!-- Start Page Content -->
-                <!-- ============================================================== -->
-                <div class="row">
-                    <div class="col-12">
-                        <div class="card card-body">
-                            <h4 class="card-title">Groot Mebmership</h4>
-                            <h5 class="card-subtitle"> Please Join Groot Member </h5>
-                            <form class="form-horizontal m-t-30" action="../complete/" method="post">
-                                {% csrf_token %}
-                                 <div class="form-group">
-                                    <label for="ID">ID <span class="help"></span></label>
-                                    <input type="text" id="ID" name="id" class="form-control" placeholder="Input your ID">
-                                </div>
-                                <div class="form-group">
-                                    <label for="name">Name <span class="help"></span></label>
-                                    <input type="text" id="name" name="name" class="form-control" placeholder="Input your Fullname">
-                                </div>
-                                <div class="form-group">
-                                    <label>Password</label>
-                                    <input type="password" class="form-control" value="password" name="pw">
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Email <span class="help"></span></label>
-                                    <input type="email" id="email" name="e_mail" class="form-control" placeholder="example@gmail.com">
-                                </div>
-                                <div class="form-group">
-                                    <label>주소</label>
-                                    <input type="text" class="form-control" placeholder="Input your Address">
-                                </div>
-                                <div class="form-group">
-                                    <label>자기소개</label>
-                                    <textarea class="form-control" rows="5"></textarea>
-                                </div>
-                                <div>
-                                    <input type="submit" name="제출">
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <!-- ============================================================== -->
-                <!-- End PAge Content -->
-                <!-- ============================================================== -->
-                <!-- ============================================================== -->
-                <!-- Right sidebar -->
-                <!-- ============================================================== -->
-                <!-- .right-sidebar -->
-                <!-- ============================================================== -->
-                <!-- End Right sidebar -->
-                <!-- ============================================================== -->
-            </div>
+            <!-- .right-sidebar -->
             <!-- ============================================================== -->
-            <!-- End Container fluid  -->
-            <!-- ============================================================== -->
-            <!-- ============================================================== -->
-            <!-- footer -->
-            <!-- ============================================================== -->
-            <footer class="footer text-center">
-                All Rights Reserved by Mango Admin. Designed and Developed by
-                <a href="http://localhost:8000/index">We are Groot</a>.
-            </footer>
-            <!-- ============================================================== -->
-            <!-- End footer -->
+            <!-- End Right sidebar -->
             <!-- ============================================================== -->
         </div>
         <!-- ============================================================== -->
-        <!-- End Page wrapper  -->
+        <!-- End Container fluid  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- footer -->
+        <!-- ============================================================== -->
+        <footer class="footer text-center">
+            All Rights Reserved by Mango Admin. Designed and Developed by
+            <a href="http://localhost:8000/index">We are Groot</a>.
+        </footer>
+        <!-- ============================================================== -->
+        <!-- End footer -->
         <!-- ============================================================== -->
     </div>
     <!-- ============================================================== -->
-    <!-- End Wrapper -->
-    <!-- ============================================================== -->
-    <!-- ============================================================== -->
-    <!-- All Jquery -->
+    <!-- End Page wrapper  -->
     <!-- ============================================================== -->
     <script src="{% static 'assets/libs/jquery/dist/jquery.min.js' %}"></script>
     <!-- Bootstrap tether Core JavaScript -->
